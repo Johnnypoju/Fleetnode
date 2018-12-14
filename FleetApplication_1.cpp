@@ -1,9 +1,8 @@
 /*
 ===============================================================================
  Name        : main.c
- Author      : $(author)
+ Author      : Joonas Sumusalo	
  Version     :
- Copyright   : $(copyright)
  Description : main definition
 ===============================================================================
 */
@@ -44,7 +43,6 @@ void Sleep(int ms)
 		__WFI();
 	}
 }*/
-// TODO: insert other definitions and declarations here
 
 int main(void) {
 
@@ -65,7 +63,7 @@ int main(void) {
 
    	/* Enable and setup SysTick Timer at a periodic rate */
    	//SysTick_Config(SystemCoreClock / 1000);
-    // TODO: insert code here
+    	//creating UART objects for data receive and send
    	UART *uart1 = new UART();
    	UART *uart2 = new UART(2);
    	/* test vector
