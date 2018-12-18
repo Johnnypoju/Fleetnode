@@ -37,7 +37,7 @@ private:
 	RINGBUFF_T rxring2;
 	uint8_t rxbuff[UART_RB_SIZE];
 	uint8_t txbuff[UART_RB_SIZE];
-	bool UFlag;
+	bool UFlag; //shows which UART port has been set for serial object (False==UART1, True==UART2)
 
 };
 
