@@ -63,9 +63,11 @@ int main(void) {
 
    	/* Enable and setup SysTick Timer at a periodic rate */
    	//SysTick_Config(SystemCoreClock / 1000);
-    	//creating UART objects for data receive and send
+    	
+	/*creating UART objects for data receive and send*/
    	UART *uart1 = new UART();
    	UART *uart2 = new UART(2);
+	
    	/* test vector
    	vector <const char*> testvec;
    	const char* test = "ABCDEFG\n";*/
@@ -75,6 +77,7 @@ while (1){
 	for (int i = 0; i < 8; i++){
 		testvec.push_back(&test[i]);
 	}*/
+	
 	uart1->UART_receive();
 	uart2->UART_send(uart1->UART_get());
 
